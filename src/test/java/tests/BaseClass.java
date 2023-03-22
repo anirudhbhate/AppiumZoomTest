@@ -8,14 +8,15 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.openqa.selenium.WebElement;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 public class BaseClass {
 
-	private AppiumDriver driver;
+	AndroidDriver driver;
 
 	@BeforeTest
-	public void setup() {
+	public void setup() throws Exception {
 
 		try {
 
@@ -31,7 +32,7 @@ public class BaseClass {
 
 			URL url = new URL("http://0.0.0.0:4723/wd/hub");
 
-			driver = new AppiumDriver(url, caps);
+			driver = new AndroidDriver(url, caps);
 
 		} catch (Exception exp) {
 			System.out.println("Reason for the exception is : " + exp.getCause());
@@ -40,15 +41,12 @@ public class BaseClass {
 		}
 
 	}
-
-	@Test
-	public void sampleTest() {
-		System.out.println("I have initialised the app successfuly");
-	}
+	
 
 	@AfterTest
-	public void teardown() {
+	public void teardown() throws Exception {
 
+		driver.quit();
 	}
 
 }
