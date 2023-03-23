@@ -1,6 +1,7 @@
 package tests;
 
 import java.net.*;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -33,6 +34,7 @@ public class BaseClass {
 			URL url = new URL("http://0.0.0.0:4723/wd/hub");
 			
 			driver = new AndroidDriver(url,caps);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		} catch (Exception exp) {
 			System.out.println("Reason for the exception is : " + exp.getCause());
