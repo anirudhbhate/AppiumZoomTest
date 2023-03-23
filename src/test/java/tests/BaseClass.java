@@ -28,7 +28,7 @@ public class BaseClass {
 			caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 60);
 			caps.setCapability("appPackage", "us.zoom.videomeetings");
 			caps.setCapability("appActivity", "com.zipow.videobox.LauncherActivity");
-			caps.setCapability("app", "/Users/anirudhb/Downloads/Zoom.apk");
+			caps.setCapability("app", "/Users/anirudhb/eclipse-workspace/AppiumZoomTest/src/test/resources/apps/Zoom.apk");
 			caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
 
 			URL url = new URL("http://0.0.0.0:4723/wd/hub");
