@@ -31,7 +31,7 @@ public class BaseClass {
 			caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel 4 API 29");
 			caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 60);
 			// Add the Zoom apk to your resources/app folder in this project or update the path to where the apk is located 
-			caps.setCapability("app", "/Users/anirudhb/eclipse-workspace/AppiumZoomTest/src/test/resources/apps/Zoom.apk");
+			caps.setCapability("app", "<Add apk path here>");
 			caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
 
 			// Update the URL below to match your Appium configuration 
